@@ -1,18 +1,35 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <a class="reset-link" href="#" @click.prevent="onClearLS">Oчистить local Storage, чтобы показать опросник при следующей загрузке</a>
+    </div>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+// import Quiz from "@/components/Quiz.vue";
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+
+  methods: {
+    onClearLS() {
+      localStorage.removeItem('hide-quiz');
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.reset-link {
+  display: inline-block;
+  margin-top: 100px;
+  text-decoration: none;
+  color: #000;
+  &:hover {
+    color: #0FA1DB;
+  }
+}
+</style>

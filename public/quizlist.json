@@ -1,0 +1,69 @@
+{
+	"total": 5,
+	"questions": [
+		{
+			"question": "How often do you visit our site?",
+			"answer_type": "radiobutton",
+			"answers": {
+				"items": [
+					"A couple of times a month",
+					"Once a week",
+					"Few times a week",
+					"Every day",
+					"Several times a day"
+				]
+			}
+		},
+		{
+			"question": "Are you comfortable using our site?",
+			"answer_type": "radiobutton",
+			"answers": {
+				"items": [
+					"Comfortable",
+					"Not very comfortable",
+					"Very uncomfortable"
+				]
+			},
+			"set_condition": {
+				"0": "comfortable",
+				"1": "not-comfortable",
+				"2": "not-comfortable"
+			}
+		},
+		{
+			"question": "Tell us what exactly you do not like?",
+			"answer_type": "textarea-with-disable",
+			"answers": {
+				"disable_text": "I do not want to answer"
+			},
+			"condition_for_showing": ["not-comfortable"]
+		},
+		{
+			"question": "Tell us what you like most about our site?",
+			"answer_type": "textarea-with-disable",
+			"answers": {
+				"disable_text": "I do not want to answer"
+			},
+			"condition_for_showing": ["comfortable"]
+		},
+		{
+			"question": "What changes would you like?",
+			"answer_type": "checkbox-with-my",
+			"answers": {
+				"items": [
+					"Design change",
+					"Newsletter",
+					"Online consultations"
+				],
+				"my_variant_text": "Your answer"
+			}
+		},
+		{
+			"question": "Is there anything else you want to tell us?",
+			"answer_type": "textarea-with-disable",
+			"answers": {
+				"disable_text": "I do not want to answer"
+			}
+		}
+	]
+}
